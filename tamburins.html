@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tamburins</title>
+    <!-- 메타포 -->
+    <meta name="description" content="">
+    <meta name="keywords" content="tamburins">
+    <!-- 오픈그래프 -->
+    <meta property="og:site_name" content="tamburins">
+    <meta property="og:title" content="tamburins">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="tamburins">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://127.0.0.1:5500/img/icon/favi.png">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link href="./tamburins_files/css2" rel="stylesheet">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./tamburins_files/html5shiv.js.다운로드"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./tamburins_files/prefixfree.min.js.다운로드"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./tamburins_files/respond.min.js.다운로드"></script>
+    <!-- jquery 플러그인 연결 -->
+    <script src="./tamburins_files/jquery-1.11.1.js.다운로드"></script>
+    <link rel="stylesheet" href="./tamburins_files/reset2.css">
+    <style>
+    /* header.css */
+    .hd { width: 100%; height: 122px; position:absolute; top: 0; 
+    left: 0; z-index:91;}
+    .hd_wrap { width: 1222px; margin-top:10px; margin-left: auto; margin-right: auto; }
+    .logo { display:block; width: 144px; height: auto; float:left;
+    margin:30px 35px;}
+    .logo img { display:block; width: 92%; height: auto; }
+    .tnb { float:right; margin: 35px 40px; }
+    .tnb a { padding: 0.5em; font-size:11px; color:rgb(124, 124, 124); }
+    .tnb a:hover { color:rgb(255, 255, 255); font-weight:800; text-decoration: underline; }
+    /* 방법1 : logo/tnb/gnb 한 줄로 배치 */
+    /* .gnb { float:left;  width: 704px; margin-left: 50px; margin-top: 16px; } */
+    /* 방법2 : gnb만 밑으로 내릴 경우 */
+    .gnb { clear:both; width: 100%; }
+    /* clear-fix 처리 */
+    .gnb:after { content:""; display:block; clear:both; } 
+    .gnb > ul:after { content:""; display:block; clear:both; }
+    .gnb > ul > li { float:left; width: 20%; height:40px; line-height: 40px; position:relative; }
+    .gnb .dp1 { display:block; color:rgba(255, 255, 255, 0.67); text-align: center; 
+    background-color:rgba(0, 0, 0, 0); font-size:13px; }
+    .gnb li:hover .dp1 { color:rgb(255, 255, 255); background-color:rgba(194, 226, 77, 0.151); }
+    .gnb .sub { display:none; width: 100%; height:auto; position:absolute; top:40px; background-color:rgba(204, 204, 204, 0);
+    left: 0; z-index:90; height: 124px; }
+    .gnb:hover li .sub { display:block;  }
+    .gnb li .sub li { clear:both; height: 30px; line-height: 30px; }
+    .gnb li .sub li a { background-color:rgba(175, 202, 67, 0); color:rgb(0, 0, 0); font-size:13px; display:block; text-indent:2em; 
+    overflow: hidden; white-space:nowrap; text-overflow: ellipsis; }
+    .gnb li .sub li:hover a { background-color:rgba(0, 0, 0, 0);color:rgb(255, 255, 255); }
+    .content { clear: both; width: 100%; }
+    .vs { clear:both; width: 100%; height:100vh; overflow:hidden; }
+    .vdo { display:block; width:100%; height:auto; }
+
+    /* content */
+    .page { clear:both; width: 100%; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+    #page1, #page3 { color: rgba(185, 215, 78, 0.99); background-color:#000000; }
+    .page_tit { text-align: center; font-size:32px; padding-top:1.2em; padding-bottom: 0.8em; }
+    .lst { clear:both; width: 1200px; }
+    .lst:after { content:""; display:block; clear: both;}
+    .lst li { margin-bottom: 40px; }
+    .lst li.left { float:left; width: 816px; height: 459px; }
+    .lst li.right { float:right; width:350px; height: 459px; }
+    .ico_lst { clear:both; width: 100%; overflow:hidden; }
+    .ico_lst li a { display:block; background-repeat: no-repeat; 
+    background-position:0px center; background-size:auto 80%; 
+padding-left: 55px; }
+    .ico_lst li a.icon1 { background-image: url("./img/icon/ico_service_01.svg"); }
+    .ico_lst li a.icon2 { background-image: url("./img/icon/ico_service_02.svg");}
+    .ico_lst li a.icon3 { background-image: url("./img/icon/ico_service_03.svg"); }
+    .cate_tit { color:rgba(185, 215, 78, 0.95); font-size:20px; padding-bottom: 0.2em; }
+    .cate_com { color:rgba(186, 215, 78, 0.65); font-size:14px; overflow:hidden;
+    white-space:nowrap; text-overflow:ellipsis; }
+
+    #page2 { background-color: rgb(186, 215, 78); }
+    .pic_lst { clear:both; width: 100%; padding-bottom: 80px; }
+    .pic_lst:after { content:""; display:block; clear:both; }
+    .pic_lst li { float:left; position:relative; margin-bottom: 40px; }
+    .pic_lst li a { display:block; width: 360px; margin-right: 40px;
+    overflow: hidden; height: 300px; }
+    .pic_lst li a img { display:block; width: 120%; margin-top: -195px; margin-left: -40px; transition-duration:0.5s; }
+    .pic_lst li a:hover img { margin-left: 0; }
+    .pic_lst li a .hv_box { width: 360px; height: 300px; color:#fff; opacity:0; position:absolute; top:0; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
+    .pic_lst li a:hover .hv_box { opacity:1; }
+    .pic_tit { position:absolute; top:30px; left: 30px; 
+    text-shadow:0px 0px 3px rgb(0, 0, 0); }
+    .pic_com { position:absolute; right:30px; bottom:30px; 
+        text-shadow:0px 0px 3px rgb(27, 53, 28); }
+
+    #page3 { background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position:center center; height: 100vh; background-image:url("./img/bg_partners.jpg"); overflow:hidden; }
+    #page3 .page_wrap { width: 100%; }
+    .circle_lst { clear:both; width: 4455px; }
+    .circle_lst li { width: 200px; height: 200px; position:relative; border-radius:120px; overflow:hidden; background-color: #fff;
+    float:left; margin:28px;  }
+    .circle_lst.lst2 li { float:right; }
+    .circle_lst li a { display:block; width: 100%; height: 100%; }
+    .circle_lst li a img { display:block; width:103%; height: 205px; margin-left: -2px; margin-bottom: -3px;
+    position:absolute;  }
+
+    /* footer */
+    .ft { clear:both; width: 100%; height: 200px; background-color: rgb(0, 0, 0); padding-bottom: 50px; }
+    .ft_wrap { clear:both; width: 1200px; margin: 0 auto; padding-top: 50px;  }
+    .ft_wrap:after { content:""; display:block; clear:both; }
+    .ft_logo { float:left;  }
+    .ft_logo img {width: 100px; float: left; margin : 0px -100px;}
+    .mid_box { float:left; width: 600px; padding-left: 300px; }
+    .fnb { clear:both; }
+    .fnb a { color:rgb(205, 205, 205); font-size:12px; padding: 10px; }
+    .fnb a.dpc { color:rgb(205, 205, 205); }
+    .addr { padding-left: 10px; color:rgb(205, 205, 205); padding-top: 12px; 
+    font-size:10px; line-height: 1.8; }
+    .copyright { padding-left: 10px; color:(231, 231, 231); padding-top: 5px; font-size:10px; }
+    .sel_box { float:right; border-bottom:1px solid rgb(255, 255, 255);
+    height: 44px; line-height: 44px; text-align:center; width: 140px; }
+    #sel { border:none; outline: none; background-color: transparent; color:rgb(255, 255, 255); }
+    #sel option {background-color: #000; color:rgb(255, 255, 255); }
+    </style>
+    <script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=600){
+                $(".hd").css("position","fixed");
+            } else {
+                $(".hd").css("position","absolute");
+            }
+        });
+        $
+        $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
+        $lst1_obj = $(".circle_lst li").clone();
+        $(".circle_lst.lst2").append($lst1_obj);
+    });    
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="http://127.0.0.1:5500/index.html" class="logo"><img src="./tamburins_files/logo.png" alt="로고"></a>
+            <nav class="tnb">
+                <a href="http://127.0.0.1:5500/index.html">로그인</a>
+                <a href="http://127.0.0.1:5500/index.html">회원가입</a>
+                <a href="http://127.0.0.1:5500/index.html">마이페이지</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="http://127.0.0.1:5500/index.html" class="dp1">제품보기</a>
+                        <ul class="sub">
+                            <li><a href="http://127.0.0.1:5500/index.html">베스트셀러</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">퍼퓸</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">캔들</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="http://127.0.0.1:5500/index.html" class="dp1">선물추천</a>
+                        <ul class="sub">
+                            <li><a href="http://127.0.0.1:5500/index.html">듀오세트</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">퍼퓸핸드미니7</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">손소독제트리오</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="http://127.0.0.1:5500/index.html" class="dp1">매장보기</a>
+                        <ul class="sub">
+                            <li><a href="http://127.0.0.1:5500/index.html">대한민국</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">중국</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">전시</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="http://127.0.0.1:5500/index.html" class="dp1">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="http://127.0.0.1:5500/index.html">주문배송조회</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">적립금 전환</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">고객서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="http://127.0.0.1:5500/index.html" class="dp1">소셜</a>
+                        <ul class="sub">
+                            <li><a href="http://127.0.0.1:5500/index.html">Instagram</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">Kakaotalk</a></li>
+                            <li><a href="http://127.0.0.1:5500/index.html">Facebook</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <figure class="vs">
+            <video src="./video/main.mp4" autoplay="" muted="" class="vdo"></video>
+        </figure>
+        <section class="page" id="page1">
+            <div class="page_wrap">
+                <h2 class="page_tit">감각적 아트와 아름다움을<br>지향하는 코스메틱 브랜드<br>탬버린즈</h2>
+                <ul class="lst">
+                    <li class="left">
+                        <iframe width="816" height="459" src="./tamburins_files/XDhsibRT9rU.html" title="Tamburins campaign shoot vlog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </li>
+                    <li class="right">
+                        <ul class="ico_lst">
+                            <li>
+                                <a href="https://www.youtube.com/embed/XDhsibRT9rU" target="vdo2" class="icon1">
+                                    <h3 class="cate_tit">Tamburins vlog</h3>
+                                    <p class="cate_com">비하인드 스토리</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://youtu.be/8TyhkNrO3tE" target="vdo2" class="icon2">
+                                    <h3 class="cate_tit">티파니 in 하우스 도산 '탬버린즈'</h3>
+                                    <p class="cate_com">손소독제, 핸드크림, 핸드워시, 향수</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://127.0.0.1:5500/index.html" target="vdo2" class="icon3">
+                                    <h3 class="cate_tit"></h3>
+                                    <p class="cate_com"></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="page" id="page2">
+            <div class="page_wrap">
+                <h2 class="page_tit">베스트셀러</h2>
+                <ul class="pic_lst">
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best1.webp" alt="best1" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">FEY9</h3>
+                                <p class="pic_com">18,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best2.webp" alt="best2" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">바디듀오 BIGALICO</h3>
+                                <p class="pic_com">68,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best3.webp" alt="best3" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">퍼퓸드 핸드앤바디 워시 000</h3>
+                                <p class="pic_com">32,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best4.webp" alt="best4" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">바디로션 BIGSALICO</h3>
+                                <p class="pic_com">38,500원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best5.webp" alt="best5" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">퍼퓸 핸드케어 미니 세트 FEY9</h3>
+                                <p class="pic_com">26,500원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best6.webp" alt="best6" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">손 소독제 트리오(000+FEY+7)</h3>
+                                <p class="pic_com">24,500원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best7.webp" alt="best7" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">MULBERRY LEAVES</h3>
+                                <p class="pic_com">6,5000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best8.webp" alt="best8" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">바디워시 BIGALICO</h3>
+                                <p class="pic_com">33,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5500/index.html">
+                            <img src="./tamburins_files/best9.webp" alt="best9" class="pic">
+                            <div class="hv_box">
+                                <h3 class="pic_tit">바디워시 FOG</h3>
+                                <p class="pic_com">33,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="page" id="page3">
+            <div class="page_wrap">
+                <h2 class="page_tit">플래그쉽스토어</h2>
+                <ul class="circle_lst lst1">
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship.jfif" alt="파트너스01" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship1.jfif" alt="파트너스02" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship2.jfif" alt="파트너스03" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship3.jfif" alt="파트너스04" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship4.jfif" alt="파트너스05" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship5.jfif" alt="파트너스06" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship6.jfif" alt="파트너스07" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship7.jfif" alt="파트너스08" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship8.jfif" alt="파트너스09" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="./tamburins_files/flagship8.jpg" alt="파트너스10" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="http://127.0.0.1:5500/index.html" alt="파트너스11" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="http://127.0.0.1:5500/index.html" alt="파트너스12" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="http://127.0.0.1:5500/index.html" alt="파트너스13" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="http://127.0.0.1:5500/index.html" alt="파트너스14" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="http://127.0.0.1:5500/index.html" alt="파트너스15" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="http://127.0.0.1:5500/index.html" alt="파트너스16" class="thumb"></a></li>
+                    <li><a href="http://127.0.0.1:5500/index.html"><img src="http://127.0.0.1:5500/index.html" alt="파트너스17" class="thumb"></a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="./tamburins_files/logo.png" alt="하단로고"></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="http://127.0.0.1:5500/index.html" class="dpc">개인정보 처리 방침</a>
+                    <a href="http://127.0.0.1:5500/index.html" class="dpc">이용약관</a>
+                    <a href="http://127.0.0.1:5500/index.html">이메일무단수집거부</a>
+                </nav>
+                <p class="addr">
+                   주)아이아이컴바인드 | 대표자 | 김한국 사업자등록번호:119-86-38589<br>
+                    서울특별시 마포구 어울마당로5길 41 | 대표 번호 : 1644-1246 | 이메일 : cs@tamburins.com<br>
+                    개인정보 보호 책임자 : 정태호 | 호스팅 서비스 사업자 : Aws | 통신판매업신고번호: 제2014-서울마포-1050호<br>
+                    고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다.   
+                </p>
+                <p class="copyright">COPYRIGHT ⓒ 탬버린즈 대한민국</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.gentlemonster.com/kr/stories/haus-dosan">HOUSE-DOSAN</option>
+                    <option value="https://www.gentlemonster.com/kr/?gclid=Cj0KCQjwhY-aBhCUARIsALNIC07teDEQrdJs3IGd4txUABRl1yBBbw2ktZRfYeesw68mua8Mmqsc8A8aAmYcEALw_wcB">GENTELMONSTER</option>
+                    <option value="https://www.instagram.com/nu_dake/?hl=ko">NUDAKE</option>
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
