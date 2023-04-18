@@ -233,7 +233,7 @@ header {
 .main-sustain-content {
   width: 100%;
   height: 40rem;
-  background-image: url(/resources/img/common/main_sec07_img.jpg);
+  background-image: url(./resources/img/common/main_sec07_img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
