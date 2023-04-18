@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>comming soon</title>
+    <style>
+      /* body 요소를 전체화면에 꽉차게 설정 */
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      .txt p {
+        text-align: center;
+        margin: 20%;
+        font-size: 4rem;
+        font-weight: 900;
+        animation: rotateY 10s linear infinite;
+        color: aliceblue;
+      }
+
+      @keyframes rotateY {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+      /* 꽃가루 이미지 설정 */
+      .flower {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(42, 234, 215);
+        opacity: 0.5;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="txt">
+      <p><a href="index.html" title="메인페이지로 돌아가기" alt="메인페이지로 돌아가기">comming soon</a></p>
+    </div>
+
+    <script>
+      // 윈도우 크기를 변수에 저장
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      // 꽃가루를 생성하는 함수
+      function createFlower() {
+        // 꽃가루 이미지를 생성
+        const flower = document.createElement("div");
+        flower.className = "flower";
+
+        // 랜덤한 위치에 꽃가루를 추가
+        flower.style.left = Math.random() * width + "px";
+        flower.style.top = Math.random() * height + "px";
+
+        // 꽃가루를 화면에 추가
+        document.body.appendChild(flower);
+
+        // 꽃가루가 떨어지는 애니메이션 구현
+        const animation = flower.animate([{ transform: "translate3d(0,0,0)" }, { transform: `translate3d(${Math.random() * width}px, ${height}px, 0)` }], {
+          duration: 3000 + Math.random() * 3000, // 애니메이션 시간
+          easing: "cubic-bezier(0.4, 0.61, 0.5, 1)", // 이징 함수
+          delay: Math.random() * 200, // 애니메이션 지연 시간
+        });
+
+        // 꽃가루가 떨어지고 나서 제거
+        animation.onfinish = () => flower.remove();
+      }
+
+      // 일정 시간 간격으로 꽃가루 생성
+      setInterval(createFlower, 100);
+    </script>
+  </body>
+</html>

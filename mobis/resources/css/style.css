@@ -1,0 +1,375 @@
+@charset "UTF-8";
+/* 레이아웃 */
+.wrap {
+  width: 100%;
+}
+/*스크롤바 */
+
+body::-webkit-scrollbar {
+  width: 9px; /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 10%; /* 스크롤바의 길이 */
+  background: #c6c6c6; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0); /*스크롤바 뒷 배경 색상*/
+}
+
+/* 메인 컨텐츠 */
+.main-content {
+  width: 100%;
+  height: 800px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bg-video-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 800px;
+  z-index: -1;
+  opacity: 0.9;
+  object-fit: cover;
+}
+
+.main-content-tit {
+  position: absolute;
+  top: 19rem;
+  left: 7rem;
+  color: white;
+}
+.main-content-txt1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* 헤더 영역 */
+header {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+}
+/* 헤더 중심 */
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+/* 로고 */
+#logo img {
+  width: 5.5rem;
+  margin-top: 1.2rem;
+}
+
+/* 메뉴 */
+.nav {
+  margin-right: 17rem;
+}
+.nav .menu {
+  display: flex;
+}
+.nav .menu > li {
+  display: block;
+  width: 9rem;
+}
+.nav .menu > li > a {
+  display: block;
+  padding-top: 1.6rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.nav .menu .submenu > li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.nav .menu .submenu {
+  display: none;
+  font-size: 0.8rem;
+  color: rgb(178, 178, 178);
+  padding-bottom: 1rem;
+}
+.nav .menu:hover .submenu {
+  display: block;
+}
+.nav .menu .submenu > li :hover {
+  color: #cc1424;
+  font-weight: bold;
+  border-bottom: 2px solid;
+  padding-bottom: 0.5px;
+}
+.red {
+  color: #cc1424;
+}
+
+/**메인 뉴스 */
+.main-sec01 {
+  width: 100%;
+  height: 23rem;
+}
+.main-sec01-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10rem 0;
+}
+.main-news {
+  display: flex;
+}
+.main-news-img-area {
+  width: 28rem;
+}
+
+.main-news-img-area img:hover {
+  transform: scale(1.02);
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.main-news-txt-area {
+  width: 400px;
+  padding-left: 50px;
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+.main-news-txt01 {
+  font-size: 0.8rem;
+  color: gray;
+}
+.main-news-txt02 {
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-overflow: ellipsis;
+}
+.main-news-txt03 {
+  padding-top: 1.5rem;
+  font-weight: 500;
+}
+
+/**메인 인재채용 */
+.main-sec02 {
+  width: 100%;
+  height: 35rem;
+  background-color: rgba(0, 53, 178);
+}
+.main-sec02-inner {
+  padding: 20rem 0 10rem;
+  margin: 0 auto;
+  max-width: 1375px;
+}
+.main-recruit-tit {
+  display: inline-block;
+}
+.main-recruit-tit-txt01 {
+  color: white;
+  font-weight: 900;
+}
+
+.main-recruit-tit-txt02 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.main-recruit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-recruit > div {
+  width: 32%;
+}
+.main-recruit-img-area img {
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5);
+}
+.main-recruit-txt-area {
+  color: black;
+  padding-top: 1rem;
+}
+.main-recruit-txt01 {
+  font-size: 0.5rem;
+  color: rgb(89, 89, 89);
+}
+.main-recruit-txt02 {
+  margin-bottom: 13rem;
+}
+
+/**메인 지속가능경영 */
+.main-sec03 {
+  width: 100%;
+  height: auto;
+  margin-top: 30rem;
+}
+.main-sec03-inner {
+  padding-top: 15rem;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+}
+.main-sustain-tit {
+  margin-bottom: 3rem;
+  color: black;
+}
+
+.main-sustain-txt01 {
+  color: #cc1424;
+}
+.main-sustain-txt02 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.main-sustain-content {
+  width: 100%;
+  height: 40rem;
+  background-image: url(/resources/img/common/main_sec07_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.main-sustain-content-txt {
+  position: relative;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 20rem;
+  padding: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.main-sustain-content-txt::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-sustain-content-txt:hover::before {
+  transform: scaleX(1);
+}
+
+.main-sustain-content-txt::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-sustain-content-txt:hover::after {
+  transform: scaleX(1);
+}
+
+/**메인 미디어 */
+
+.main-sec04 {
+  width: 100%;
+  height: auto;
+  padding-top: 14rem;
+  padding-bottom: 7rem;
+  background-color: #f7f7f7;
+}
+
+.main-sec04-inner {
+  width: 95%;
+  display: flex;
+
+  margin: 0 auto;
+}
+
+.main-media-tit-area {
+  padding-left: 4rem;
+  padding-right: 2rem;
+}
+.main-media-tit01 {
+  color: #cc1424;
+  margin: 2px;
+}
+.main-media-tit02 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.main-media-tit03 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.main-media-tit03:hover {
+  border: 2px solid rgb(99, 99, 99);
+  color: rgb(99, 99, 99);
+}
+.main-media-content-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-media-content-area > div {
+  padding: 0 1.5rem 2rem;
+  width: 30em;
+}
+.main-media-img-area img {
+  width: 100%;
+}
+.main-media01 > a {
+  display: block;
+}
+.main-media-txt-area {
+  display: block;
+  padding-top: 1rem;
+}
+
+.main-media-txt01 {
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  /* color: rgb(60, 115, 227); */
+  color: gray;
+}
+
+.main-media-txt02 {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* footer */
+footer {
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 25rem;
+  margin: auto;
+  background-color: black;
+  color: white;
+}
